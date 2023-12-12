@@ -1,0 +1,29 @@
+angka=1
+ganjil=0
+while(angka%2==1):
+    angka=int(input("Masukkan angka genap: "))
+    if(angka%2==1):
+        ganjil+=1
+    elif(angka%2==0):
+        break
+print("Anda memasukkan", ganjil, "angka ganjil")
+
+angka=0
+genap=0
+gnp=0
+ganjil=0
+gjl=0
+while(angka!=-1):
+    angka=int(input("Masukkan -1 untuk berhenti: "))
+    if (angka%2==0):
+        genap=genap+angka
+        gnp+=1
+        ratagenap=genap/gnp
+        print("Rata-rata genap: ", ratagenap)
+    elif (angka%2==1):
+        ganjil=ganjil+angka
+        gnp+=1
+        rataganjil=ganjil/gjl
+        print("Rata-rata genap: ", rataganjil)
+    elif(angka == -1):
+        break
