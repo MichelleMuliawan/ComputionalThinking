@@ -1,0 +1,72 @@
+#Mencari nilai max kedua
+
+data =[]
+print ('tulis -1 untuk berhenti!')
+a = int(input('angka: '))
+while a != -1:
+    data.append(a)
+    a = int(input('angka: '))
+print ('data: ', data)
+
+x = max(data)
+akhir = []
+for i in (data):
+    if (x == i):
+        i = 0
+    akhir.append(i)
+    
+print (max(akhir))
+
+
+#Menghitung gaji karyawan
+
+print ("1. Staff \n2. Sekretaris \n3. Supervisor \n4. Manager")
+
+for i in range (5):
+    nip = input("Masukan No Induk Pegawai: ")
+    nama = input("Masukan Nama Pegawai: ")
+    jabatan = input("Masukan no Jabatan: ")
+    alamat = input("Masukan Alamat: ")
+    gaji_pokok = float(input("Masukan Gaji Pokok: "))
+    print ("\n")
+    
+    tunjangan = 0
+    def tunj():
+        if (jabatan == '1'):
+            tunjangan = 0
+            jab="Staff"
+        elif(jabatan == '2'):
+            tunjangan = gaji_pokok*0.025
+            jab="Sekretaris" 
+        elif(jabatan == '3'):
+            tunjangan = gaji_pokok*0.05
+            jab="Supervisor"
+        else:
+            tunjangan = gaji_pokok*0.1
+            jab="Manager"
+        print ("Tunjangan: ",tunjangan)
+        
+    pajak = 0
+    def pjk():
+        if(gaji_pokok <= 5000000):
+            pajak = gaji_pokok*0.05
+        elif(gaji_pokok > 5000000):
+            pajak = gaji_pokok * 0.05
+        print ("Pajak: ",pajak)
+
+    print ("NIP: ",nip)
+    print ("Nama: ",nama)
+    print ("Jabatan: ",jabatan)
+    print ("Alamat: ",alamat)
+    print ("Gaji Pokok: ",gaji_pokok)
+    
+    gaji_bruto = gaji_pokok + tunjangan
+    ttl_gaji = gaji_bruto - pajak
+    
+    tunj()
+    print ("Gaji Bruto: ",gaji_bruto)
+    pjk()
+    
+    print ("Total Gaji: ",ttl_gaji)
+    print ("\n")
+    
